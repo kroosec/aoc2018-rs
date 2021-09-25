@@ -103,7 +103,7 @@ fn part2(sleep_table: &HashMap<usize, [usize; 60]>) -> Result<()> {
 }
 
 fn main() -> Result<()> {
-    let input = read_to_string("input.txt").expect("Missing input file");
+    let input = read_to_string("input.txt")?;
 
     let sleep_table = make_sleep_table(&input)?;
     part1(&sleep_table)?;

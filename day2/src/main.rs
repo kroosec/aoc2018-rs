@@ -49,7 +49,7 @@ fn common_letters(str1: &str, str2: &str) -> String {
 }
 
 fn main() -> Result<()> {
-    let input = read_to_string("input.txt").expect("Missing input file");
+    let input = read_to_string("input.txt")?;
 
     part1(&input);
     part2(&input);

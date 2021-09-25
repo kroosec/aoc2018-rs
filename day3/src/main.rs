@@ -10,7 +10,7 @@ type Result<T> = ::std::result::Result<T, Box<dyn ::std::error::Error>>;
 type Fabric = [[u32; 1000]; 1000];
 
 fn main() -> Result<()> {
-    let input = read_to_string("input.txt").expect("Missing input file");
+    let input = read_to_string("input.txt")?;
 
     let marked_fabric = part1(&input);
     part2(&input, &marked_fabric);
